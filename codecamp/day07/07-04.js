@@ -22,7 +22,7 @@ function solution(n) {
     
     answer = arr.reduce((cur, ele, idx) => {
         const num = ele + idx
-        return n % num !== 0? cur: cur+num
+        return n % num !== 0? cur: cur + num
         /* 약수가 아니라면 그대로 return cur, 약수라면 cur + num 해줌 */
     }, 0)
     
