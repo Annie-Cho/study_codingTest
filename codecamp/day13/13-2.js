@@ -1,3 +1,5 @@
+/* 프로그래머스 : 두 정수 사이의 합 */
+
 function solution(a, b) {
     var answer = 0;
     
