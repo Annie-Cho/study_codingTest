@@ -158,3 +158,36 @@ const result = new Array(5).fill(0); //[0, 0, 0, 0, 0]
 const arr = ["hi", "hello", "안녕"];
 const result = arr.indexOf("hello"); //1
 ```
+
+<br>
+
+## sort() : 정렬하기
+
+- 숫자 정렬하기
+  - sort()의 특성상 맨 앞의 숫자만 가지고 정렬을 시켜 원하는 정렬이 이루어지지 않는다. 따라서 다음과 같이 사용하여 정렬시킨다.
+
+```javascript
+const arr = [800, 23, 55, 62];
+
+//오름차순 정렬
+arr.sort((a, b) => a - b); //[23, 55, 62, 800]
+
+//내림차순 정렬
+arr.sort((a, b) => b - a); //[800, 62, 55, 23]
+```
+
+- 문자 정렬하기
+  - 오름차순 : sort()만으로도 정렬 가능. 혹은 연산자를 이용하여 정렬
+  - 내림차순 : sort()를 사용할 경우 reverse()로 정렬. 혹은 연산자를 이용하여 정렬
+
+```javascript
+const arr = ["kiwi", "banana", "lemon", "apple"];
+
+//오름차순
+arr.sort();
+arr.sort((a, b) => (a < b ? -1 : 1));
+
+//내림차순
+arr.sort().reverse();
+arr.sort((a, b) => (a > b ? -1 : 1));
+```
