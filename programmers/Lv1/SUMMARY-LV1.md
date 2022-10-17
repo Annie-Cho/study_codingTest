@@ -14,6 +14,14 @@ str.split(" "); //공백을 기준으로 분리하여 변환
 str.split(); //string전체를 배열로 감싸 변환
 ```
 
+- `substring()`
+  - 시작 인덱스부터 끝 인덱스의 앞까지의 문자열을 반환한다.
+
+```javascript
+const str = "This Is Example";
+str.substring(8, 12); //"Exam"
+```
+
 - `padStart(targetLength, padString)`
   - 문자열의 앞쪽에 padString을 채워넣을껀데 문자열 및 padString포함 총 길이는 targetLength이다.
   - padString에 아무것도 안 넣으면 자동적으로 공백이 들어간다.
