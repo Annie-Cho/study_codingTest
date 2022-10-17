@@ -107,17 +107,31 @@ arr.slice(-2); //['l', 'o'] => 뒤에서 2개를 가져온다.
 
 <br>
 
-## 제곱근 구하기 ([1-5])
+## 거듭제곱 / 제곱근 구하기 ([1-5], [1-26])
+
+- 거듭제곱 값 구하기
+
+```javascript
+//거듭제곱 연산자 사용하기
+const num1 = 5 ** 2; //25
+
+//거듭제곱 구하는 메소드 사용하기
+const num2 = Math.pow(5, 2); //25
+```
 
 - 제곱근 구하기
 
 ```javascript
-//거듭 제곱
-const num1 = 5 ** 2; //25
-
-//제곱근 구하는 메소드
-const num2 = Math.pow(5, 2); //25
+//제곱근 반환 메소드 사용하기
+const num = Math.sqrt(121); //11
 ```
+
+> 💡 제곱근이 정수면 약수의 갯수가 홀수다 !!!
+>
+> ```javascript
+> Number.isInteger(Math.sqrt(9)); //true => 1, 3, 9(3개)
+> Number.isInteger(Math.sqrt(11)); //false => 1, 11(2개)
+> ```
 
 <br>
 
