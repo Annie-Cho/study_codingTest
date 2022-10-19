@@ -1,6 +1,6 @@
 # Level 1 Summary
 
-## 배열, 문자열 메소드 총정리 ([1-16])
+## 문자열, 배열, 숫자 메소드 총정리 ([1-16])
 
 ### 문자열(String)
 
@@ -46,6 +46,23 @@ str.padEnd(11, "*"); //'4444*******'
 
 ```javascript
 "수박".repeat(2); //'수박수박'
+```
+
+- `match(regexp)`
+  - regexp : 정규식 개체
+  - 정규식에 해당되는 값을 찾는다.
+
+```javascript
+const str = "Hello World";
+str.match(/l/g);
+```
+
+- `replace(regexp | substr, newSubstr | function)`
+  - 정규식(regexp)에 일치하는 항목이나 문자열(substr)을 newSubstr이나 function이 반환한 값으로 대체한다.
+
+```javascript
+const str = "Hello World";
+str.replace(/o/g, "O");
 ```
 
 <br>
@@ -103,6 +120,27 @@ str.slice(1, 4); //'ell'
 const arr = ["h", "e", "l", "l", "o"];
 arr.slice(2, 4); //['l', 'l']
 arr.slice(-2); //['l', 'o'] => 뒤에서 2개를 가져온다.
+```
+
+<br>
+
+### 숫자(Number)
+
+- `toString(redix)`
+  - redix : 수의 값을 나타내기 위해 사용될 기준을 정하는 2 ~ 36사이의 정수. redix값이 지정되지 않으면, 임의로 10진수라고 가정한다.
+  - 쉽게 말해, toString()만 쓰면 Number를 String형태로 바꾸고 redix를 쓸 경우 해당 진수로 Number를 바꿔준다.
+
+```javascript
+const num1 = 10;
+const num2 = 7.5;
+const num3 = -10;
+
+num1.toString(); //'10'
+num2.toString(); //'7.5'
+
+num1.toString(2); //'1010'
+num1.toString(16); //'a'
+num3.toString(16); //'-a'
 ```
 
 <br>
