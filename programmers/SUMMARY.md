@@ -205,7 +205,7 @@ const num = Math.sqrt(121); //11
 
 <br>
 
-# 고정 크기 배열 선언과 동시에 0으로 초기하기 ([1-11])
+# 고정 크기 배열 선언과 동시에 0으로 초기화하기 ([1-11])
 
 ```javascript
 const result = new Array(5).fill(0); //[0, 0, 0, 0, 0]
