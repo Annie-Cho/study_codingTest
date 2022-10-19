@@ -2,7 +2,7 @@
 
 ## 문자열(String)
 
-### `split()`
+### split()
 
 - string을 배열로 변환한다.
 
@@ -13,7 +13,7 @@ str.split(" "); //공백을 기준으로 분리하여 변환
 str.split(); //string전체를 배열로 감싸 변환
 ```
 
-### `substring()`
+### substring()
 
 - 시작 인덱스부터 끝 인덱스의 앞까지의 문자열을 반환한다.
 
@@ -22,7 +22,7 @@ const str = "This Is Example";
 str.substring(8, 12); //"Exam"
 ```
 
-### `padStart(targetLength, padString)`
+### padStart(targetLength, padString)
 
 - 문자열의 앞쪽에 padString을 채워넣을껀데 문자열 및 padString포함 총 길이는 targetLength이다.
 - padString에 아무것도 안 넣으면 자동적으로 공백이 들어간다.
@@ -32,7 +32,7 @@ const str = "4444";
 str.padStart(11, "*"); //'*******4444'
 ```
 
-### `padEnd(targetLength, padString)`
+### padEnd(targetLength, padString)
 
 - 문자열의 뒷쪽에 padString을 채워넣을껀데 문자열 및 padString포함 총 길이는 targetLength이다.
 - padString에 아무것도 안 넣으면 자동적으로 공백이 들어간다.
@@ -42,7 +42,7 @@ const str = "4444";
 str.padEnd(11, "*"); //'4444*******'
 ```
 
-### `repeat(count)`
+### repeat(count)
 
 - 문자열을 count만큼 반복해 붙인 새로운 문자열을 반환한다.
 - count는 0과 양의 무한대 사이의 정수(음수 불가)
@@ -51,7 +51,7 @@ str.padEnd(11, "*"); //'4444*******'
 "수박".repeat(2); //'수박수박'
 ```
 
-### `match(regexp)`
+### match(regexp)
 
 - regexp : 정규식 개체
 - 정규식에 해당되는 값을 찾는다.
@@ -61,7 +61,7 @@ const str = "Hello World";
 str.match(/l/g);
 ```
 
-### `replace(regexp | substr, newSubstr | function)`
+### replace(regexp | substr, newSubstr | function)
 
 - 정규식(regexp)에 일치하는 항목이나 문자열(substr)을 newSubstr이나 function이 반환한 값으로 대체한다.
 
@@ -74,7 +74,7 @@ str.replace(/o/g, "O");
 
 ## 배열(Array)
 
-### `fill(value, start, end)`
+### fill(value, start, end)
 
 - value로 배열을 채우는데 start, end로 원하는 위치를 지정할 수 있다.
 
@@ -83,7 +83,7 @@ const arr = [0, 0, 0, 0, 0, 0];
 arr.fill("*", 0, -4); //['*', '*', 0, 0, 0, 0]
 ```
 
-### `join(seperator)`
+### join(seperator)
 
 - seperator를 사용하여 배열을 하나의 문자열로 변환한다.(합쳐준다)
 
@@ -96,7 +96,7 @@ arr.join(" "); //'h e l l o' 빈칸을 사이에 두고 문자열로 합쳐진�
 
 <br>
 
-### `splice(start, deleteCount, item1, item2, ...)`
+### splice(start, deleteCount, item1, item2, ...)
 
 - 배열의 기존 요소 삭제 또는 교체 및 새로운 요소를 추가하는 메소드
   - start : 배열의 인덱스 값
@@ -114,7 +114,7 @@ months.splice(4, 0, "April", "May"); //['January', 'February', 'March', 'April',
 
 ## 문자열, 배열 공통
 
-### `slice(start, end)`
+### slice(start, end)
 
 - start와 end를 활용하여 문자열 및 배열에서 원하는 위치와 끝까지의 값을 반환해준다.
 - end값이 기입되었을 경우, end의 앞자리까지 반환해준다.
@@ -135,7 +135,7 @@ arr.slice(-2); //['l', 'o'] => 뒤에서 2개를 가져온다.
 
 ## 숫자(Number)
 
-### `toString(redix)`
+### toString(redix)
 
 - redix : 수의 값을 나타내기 위해 사용될 기준을 정하는 2 ~ 36사이의 정수. redix값이 지정되지 않으면, 임의로 10진수라고 가정한다.
 - 쉽게 말해, toString()만 쓰면 Number를 String형태로 바꾸고 redix를 쓸 경우 해당 진수로 Number를 바꿔준다.
