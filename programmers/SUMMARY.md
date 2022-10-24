@@ -148,9 +148,9 @@ const num3 = -10;
 num1.toString(); //'10'
 num2.toString(); //'7.5'
 
-num1.toString(2); //'1010'
-num1.toString(16); //'a'
-num3.toString(16); //'-a'
+num1.toString(2); //'1010' => 2진수
+num1.toString(16); //'a'  => 16진수
+num3.toString(16); //'-a' => 16진수
 ```
 
 <br>
