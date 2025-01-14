@@ -4,13 +4,12 @@
  * 7개의 수가 주어지면 그 숫자 중 가장 작은 수를 출력하는 프로그램을 작성하세요.
  */
 
-function solution(a, b, c, d, e, f, g){
+function solution(numbers){
     // case 1) 내장함수 사용하기
-    return Math.min(a, b, c, d, e, f, g);
+    return Math.min(...numbers);
 
     // case 2) for문 사용하기
-    // let answer = a;
-    // let numbers = [a, b, c, d, e, f, g];
+    // let answer = numbers[0];
     //
     // for(let i = 0; i<numbers.length; i++){
     //     if(answer > numbers[i]){
@@ -20,4 +19,5 @@ function solution(a, b, c, d, e, f, g){
     // return answer;
 }
 
-console.log(solution(7, 6, 5, 4, 3, 2, 1));
+let numbers = [7, 6, 5, 4, 3, 2, 1];
+console.log(solution(numbers));
