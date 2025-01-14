@@ -5,7 +5,7 @@
  */
 
 function solution(a, b, c, d, e, f, g){
-    // case 1) 빌트인 메소드 사용하기
+    // case 1) 내장함수 사용하기
     return Math.min(a, b, c, d, e, f, g);
 
     // case 2) for문 사용하기
