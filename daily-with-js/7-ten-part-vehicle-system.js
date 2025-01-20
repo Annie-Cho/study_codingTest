@@ -21,9 +21,8 @@
 
 /* array로 받는 경우 */
 function solution(dateEnd, carPlateEnds){
-    let carsCount = 0;
-
     // case1 : for문 사용하기
+    // let carsCount = 0;
     // for(let i=0; i<carPlateEnds.length; i++){
     //     const endCarNumber = carPlateEnds[i] % 10;
     //
