@@ -5,7 +5,8 @@
  * 프로그램을 작성하세요.(정렬 사용 불가)
  */
 
-function solution(a=0, b=0, c=0){
+function solution(a = 0, b = 0, c = 0) {
+  /*
     let answer = 0;
 
     if(a <= b){
@@ -19,7 +20,18 @@ function solution(a=0, b=0, c=0){
     }
 
     return answer;
+    */
+
+  let min = a;
+
+  if (min > b) {
+    min = b;
+  }
+  if (min > c) {
+    min = c;
+  }
+
+  return min;
 }
 
 console.log(solution(9, 5, 11));
-
