@@ -16,6 +16,7 @@
  * 20 7 23 19 10 8 13
  */
 
+/*
 function solution(heights){
     const sum = heights.reduce((sum, height) => sum + height, 0);
 
@@ -35,6 +36,27 @@ function solution(heights){
     }
 
     console.log('error');
+
+    console.log(solution([20, 7, 23, 19, 10, 15, 25, 8, 13]));
+}
+*/
+
+/**
+ * Tip : 모두의 합을 구한 후 -100 한 값을 구한 후 두 값을 더했을 때 해당 값이 출력되면 OK
+ */
+
+function findDwarfs(heights) {
+  const sum = heights.reduce((acc, cur) => acc + cur, 0);
+  const diff = sum - 100;
+
+  for (let i = 0; i < heights.length; i++) {
+    for (let j = i + 1; j < heights.length; j++) {
+      if (diff === heights[i] + heights[j]) {
+        return heights.filter((_, idx) => idx !== i && idx !== j);
+      }
+    }
+  }
+  return null;
 }
 
-console.log(solution([20, 7, 23, 19, 10, 15, 25, 8, 13]));
+console.log(findDwarfs([20, 7, 23, 19, 10, 15, 25, 8, 13]));
