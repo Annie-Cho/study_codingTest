@@ -20,27 +20,34 @@
  */
 
 /* array로 받는 경우 */
-function solution(dateEnd, carPlateEnds){
-    // case1 : for문 사용하기
-    // let carsCount = 0;
-    // for(let i=0; i<carPlateEnds.length; i++){
-    //     const endCarNumber = carPlateEnds[i] % 10;
-    //
-    //     if(endCarNumber === dateEnd){
-    //         carsCount++;
-    //     }
-    // }
-    // return carsCount;
+function solution(dateEnd, carPlateEnds) {
+  // case1 : for문 사용하기
+  // let carsCount = 0;
+  // for(let i=0; i<carPlateEnds.length; i++){
+  //     const endCarNumber = carPlateEnds[i] % 10;
+  //
+  //     if(endCarNumber === dateEnd){
+  //         carsCount++;
+  //     }
+  // }
+  // return carsCount;
 
-    // case2 : reduce 사용하기
-    return carPlateEnds.reduce((carsCount, carPlateEnd) =>
-        dateEnd === (carPlateEnd % 10) ? ++carsCount : carsCount
-    , 0);
+  // case2 : reduce 사용하기
+  return carPlateEnds.reduce(
+    (carsCount, carPlateEnd) =>
+      dateEnd === carPlateEnd % 10 ? ++carsCount : carsCount,
+    0
+  );
+
+  // case3 : 변수 명확하게 표현하기
+  //     return carPlates.reduce((acc, cur) => {
+  //     const firstNum = cur % 10;
+  //     return day === firstNum ? acc + 1 : acc;
+  //   }, 0);
 }
 
 console.log(solution(3, [25, 23, 11, 47, 53, 17, 33]));
 console.log(solution(0, [12, 20, 54, 30, 87, 91, 30]));
-
 
 /* string으로 받는 경우
 
