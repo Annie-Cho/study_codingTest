@@ -19,6 +19,7 @@
 /*
 function solution(heights){
     const sum = heights.reduce((sum, height) => sum + height, 0);
+    let flag = 0;
 
     for(let i=0; i<heights.length-1; i++){
         for(let j=i+1; j<heights.length; j++){
@@ -26,12 +27,18 @@ function solution(heights){
             if(total === 100){
                 // 내 버전
                 // return heights.filter((val, idx) => idx !== i && idx !== j);
+                // return heights;
 
-                // 강의 버전 - 내 버전에서는 filter로 인해 한 번 더 loop를 돌게되는데 바로 splice하는 것이 시간 복잡도 측면에서 좋아보인다.
+                // 강의 버전 - filter를 활용하는 것이 코드 안정성 및 가독성이 좋아진다.
                 heights.splice(j, 1);
                 heights.splice(i, 1);
-                return heights;
+                flag = 1;
+                break;   
             }
+        }
+
+        if(flag === 1) {
+            break;
         }
     }
 
