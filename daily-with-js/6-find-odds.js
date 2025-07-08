@@ -10,29 +10,43 @@
  * 이므로 홀수들 중 최소값은 41이 된다.
  */
 
-function solution(numbers){
-    // case 1) 내장함수 사용하기
-    const odds = numbers.filter((number) => number % 2 !== 0);
+function solution(numbers) {
+  // case 1) 내장함수 사용하기
+  const odds = numbers.filter((number) => number % 2 !== 0);
 
-    const sum = odds.reduce((acc, number) => acc + number, 0);
-    const min = Math.min(...odds);
+  const sum = odds.reduce((acc, number) => acc + number, 0);
+  const min = Math.min(...odds);
 
-    return `${sum}\n${min}`;
+  return `${sum}\n${min}`;
 
-    // case 3) for문 사용하기
-    // let sum = 0;
-    // let min = Number.MAX_SAFE_INTEGER;
-    // for(let number of numbers){
-    //     if(number % 2 !== 0){
-    //         sum += number;
-    //
-    //         if(min > number){
-    //             min = number;
-    //         }
-    //     }
-    // }
-    //
-    // return `${sum}\n${min}`;
+  /* CASE 2
+  let min = Number.MAX_SAFE_INTEGER;
+  const sum = numbers.reduce((acc, cur) => {
+    if (cur % 2 !== 0) {
+      if (min > cur) {
+        min = cur;
+      }
+
+      return acc + cur;
+    }
+    return acc;
+  }, 0);
+  */
+
+  // case 3) for문 사용하기
+  // let sum = 0;
+  // let min = Number.MAX_SAFE_INTEGER;
+  // for(let number of numbers){
+  //     if(number % 2 !== 0){
+  //         sum += number;
+  //
+  //         if(min > number){
+  //             min = number;
+  //         }
+  //     }
+  // }
+  //
+  // return `${sum}\n${min}`;
 }
 
 let numbers = [12, 77, 38, 41, 53, 92, 85];
