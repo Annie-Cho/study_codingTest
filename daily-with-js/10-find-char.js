@@ -23,8 +23,18 @@ function findChar(newString, char) {
   */
   //
   /* 내장함수 사용 - char를 기준으로 문자열을 나누어 개수를 계산한다. */
-  const answer = newString.split(char);
-  return answer.length - 1;
+  // const answer = newString.split(char);
+  // return answer.length - 1;
+
+  /* 내장함수 indexOf() 사용하기 */
+  let answer = 0;
+
+  let pos = newString.indexOf(char);
+  while (pos !== -1) {
+    answer++;
+    pos = newString.indexOf(char, pos + 1);
+  }
+  return answer;
 }
 
 console.log(findChar("COMPUTERPROGRAMMING", "R"));
