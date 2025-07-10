@@ -6,7 +6,7 @@
  */
 
 /* 내가 해본 기출변형 : 연속적으로 중복된 단어를 삭제한다.
-function deleteContinuousWord(input) {
+function deleteContinuousChar(input) {
   let before = "";
   let next = "";
   let index = 0;
@@ -34,7 +34,7 @@ function deleteContinuousWord(input) {
 }
 */
 
-function deleteDuplicatedWord(input) {
+function deleteDuplicatedChar(input) {
   let answer = "";
 
   for (let i = 0; i < input.length; i++) {
@@ -47,4 +47,4 @@ function deleteDuplicatedWord(input) {
   return answer;
 }
 
-console.log(deleteDuplicatedWord("ksekkset"));
+console.log(deleteDuplicatedChar("ksekkset"));
