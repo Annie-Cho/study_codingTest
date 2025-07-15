@@ -20,6 +20,16 @@ function extractNumber(newString) {
   }
 
   return Number(numberString); // or parseInt(numberString)
+
+  /* 만약 리턴 시 Number나 parseInt를 사용하지 말라고 한 경우
+  let number = 0;
+  for (let word of newString) {
+    if (!isNaN(word)) {
+      number = number * 10 + Number(word);
+    }
+  }
+  return number;
+   */
 }
 
 console.log(extractNumber("tge0a1h205er"));
