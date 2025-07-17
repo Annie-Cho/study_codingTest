@@ -26,6 +26,7 @@ function reverseAndFindDecimal(numbers) {
     const target = Number(revertedNumber.join(""));
 
     /* 강의 방법 
+    let res = 0;
     while (number) {
       let t = number % 10;
       res = res * 10 + t;
