@@ -27,9 +27,6 @@ function maxOfDigits(numbers) {
   }
 
   return answer.length > 1 ? Math.max(...answer) : answer[0];
-
-  /** 강의 답안 */
-  // 추후에 기입하기
 }
 
 console.log(maxOfDigits([128, 460, 603, 40, 521, 137, 123]));
