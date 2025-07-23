@@ -25,10 +25,8 @@ function giveGraduationGifts(budget, giftFees = []) {
   let answer = 0;
 
   for (let i = 0; i < sortedGiftFees.length; i++) {
-    let leftBudget = budget;
+    let leftBudget = budget - sortedGiftFees[i][0] / 2 + sortedGiftFees[i][1];
     let count = 1;
-
-    leftBudget -= sortedGiftFees[i][0] / 2 + sortedGiftFees[i][1];
 
     for (let j = 0; j < sortedGiftFees.length; j++) {
       if (i === j) continue;
