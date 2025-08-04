@@ -21,11 +21,12 @@ function cutIronSticks(sticks) {
     if (sticks[i] === "(") {
       stack.push(sticks[i]);
     } else if (sticks[i] === ")") {
-      if (sticks[i - 1] === "(") {
-        stack.pop();
+      const lastStick = sticks[i - 1];
+      stack.pop();
+
+      if (lastStick === "(") {
         answer += stack.length;
       } else {
-        stack.pop();
         answer += 1;
       }
     }
