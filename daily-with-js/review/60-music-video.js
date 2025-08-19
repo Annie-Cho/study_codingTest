@@ -30,7 +30,7 @@ function count(dvdSizes, capacity) {
 }
 
 function musicVideo(dvdCount, dvdSizes) {
-  let lt = dvdSizes.sort((a, b) => a - b).at(-1);
+  let lt = Math.max(...dvdSizes);
   let rt = dvdSizes.reduce((acc, cur) => acc + cur, 0);
   let answer = 0;
 
